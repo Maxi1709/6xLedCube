@@ -1,9 +1,10 @@
+/*
+File for testing out prototype functions
+*/
+
+
 #define _PinBitsUsed_ 7
 #define _WiggleDelay_ 5
-
-/*
-
-*/
 #define _ParallelDelay_ 5
 
 int mode = 0;
@@ -17,7 +18,6 @@ void setup()
     pinMode(i, OUTPUT);
   }
   Serial.begin(9600);
-
 }
 
 void loop() {
