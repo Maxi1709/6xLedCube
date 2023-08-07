@@ -35,7 +35,7 @@ static byte pins[42] = {};
 /*
 Flag is set false when wait()-function reached its given delay
 */
-boolean -waitflag- = false;
+boolean _waitflag_ = false;
 /*################################################################################################*/
 
 
