@@ -1,6 +1,9 @@
 /*##################################################################################################
 DESCRIPTION
-File for setting global makros and variables.
+Main file of the program code. File is compiled first.
+All global variables and makros have to be defined here to avoid compile errors.
+Contains setup() function which is run once at startup.
+Contains loop() function which is run in an endless loop.
 ##################################################################################################*/
 
 /*##################################################################################################
@@ -14,7 +17,7 @@ The numbers of bits used in the pinConfig integer.
 /*
 Time used as delay when letting leds light up parallel without flickering.
 */
-#define _PARALLELDELAY_ 5 //microseconds
+#define _PARALLELDELAY_ 5 //milliseconds
 /*################################################################################################*/
 
 
@@ -25,14 +28,18 @@ VARIABLES
 Byte array linking the pin names to the bits of pinConfig
 array[0] is linked to least significant bit (LSB) of pinConfig
 array[41] is linked to most significant bit (MSB) of pinconfig
-pinConfig is a parameter of setPins-function. 
+pinConfig is a parameter of setPins()-function. 
 */
 static byte pins[42] = {};
+/*------------------------------------------------------------------------------------------------*/
+/*
+Flag is set false when wait()-function reached its given delay
+*/
+boolean -waitflag- = false;
 /*################################################################################################*/
 
 
-/*
-####################################################################################################
+/*##################################################################################################
 FUNCTION NAME
 setup()
 ----------------------------------------------------------------------------------------------------
@@ -47,9 +54,7 @@ none
 ----------------------------------------------------------------------------------------------------
 RETURN
 void
-####################################################################################################
-*/
-
+##################################################################################################*/
 void setup()
 {
   for(int i = 0; i < _PINCONFIGBITSIZE_; i++)
@@ -59,6 +64,21 @@ void setup()
   }
 }
 
+/*##################################################################################################
+FUNCTION NAME
+loop()
+----------------------------------------------------------------------------------------------------
+DESCRIPTION
+This function is run in an endless loop.
+ Tasks:
+    >
+----------------------------------------------------------------------------------------------------
+PARAMETERS
+none
+----------------------------------------------------------------------------------------------------
+RETURN
+void
+##################################################################################################*/
 void loop()
 {
   
