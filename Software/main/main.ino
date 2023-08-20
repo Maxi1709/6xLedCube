@@ -1,7 +1,6 @@
 /***************************************************************************************************
  * DESCRIPTION
- * Main file of the program code. File is compiled first.
- * All global variables and makros have to be defined here to avoid compile errors.
+ * Main file of the program code. This File is compiled first.
  * Contains setup() function which is run once at startup.
  * Contains loop() function which is run in an endless loop.
 ***************************************************************************************************/
