@@ -1,8 +1,8 @@
 /***************************************************************************************************
  * DESCRIPTION
  * Main file of the program code. This File is compiled first.
- * Contains setup() function which is run once at startup.
- * Contains loop() function which is run in an endless loop.
+ * Contains setup function which is run once at startup.
+ * Contains loop function which is run in an endless loop.
 ***************************************************************************************************/
 
 /***************************************************************************************************
@@ -13,7 +13,7 @@
 
 /***************************************************************************************************
  * FUNCTION NAME
- * setup()
+ * setup
  * -------------------------------------------------------------------------------------------------
  * DESCRIPTION
  * This function is run once at startup.
@@ -39,7 +39,7 @@ void setup()
 
 /***************************************************************************************************
  * FUNCTION NAME
- * loop()
+ * loop
  * -------------------------------------------------------------------------------------------------
  * DESCRIPTION
  * This function is run in an endless loop.
