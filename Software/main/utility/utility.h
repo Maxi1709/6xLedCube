@@ -5,8 +5,27 @@
 /**************************************************************************************************/
 
 /***************************************************************************************************
+ * MAKROS
+*/
+/*--------------------------------------------------------------------------------------------------
+The pin connected to the button used to change the animation.
+Triggers the buttonISR.
+HAS TO BE ONE OF FOLLOWING PINS ON ARDUINO MEGA 2560!
+    > 2
+    > 3
+    > 18
+    > 19
+    > 20
+    > 21
+*/
+#define BUTTON_PIN 3 /* ! PLACEHOLDER NUMBER ! */
+/**************************************************************************************************/
+
+/***************************************************************************************************
  * CONSTANTS
- * The numbers of bits used in the pinConfig integer.
+ */
+/*--------------------------------------------------------------------------------------------------
+ The numbers of bits used in the pinConfig integer.
 */
 const byte PINCONFIG_BITSIZE = 42;
 /*--------------------------------------------------------------------------------------------------
@@ -31,7 +50,9 @@ const unsigned long PARALLEL_DELAY = 5; /* milliseconds */
 
 /***************************************************************************************************
  * FUNCTION DECLARATIONS
- * Further description of the functionS in utility.c file.
+ * Further description of the functions in utility.c file.
 */
-void setPins(int pinConfig);
+void util_setPins (int pinConfig);
+void util_wait (unsigned long waitTime);
+void util_buttonISR (void);
 /**************************************************************************************************/

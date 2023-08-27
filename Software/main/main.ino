@@ -27,7 +27,7 @@
  * RETURN
  * void
 ***************************************************************************************************/
-void setup()
+void setup (void)
 {
   /* set all pins used for led control as output and low */
   for(int i = 0; i < PINCONFIG_BITSIZE; i++)
@@ -52,7 +52,7 @@ void setup()
  * RETURN
  * void
 ***************************************************************************************************/
-void loop()
+void loop (void)
 {
   
 }
