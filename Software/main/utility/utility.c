@@ -2,6 +2,7 @@
  * Includes
 */
 #include "utility.h"
+#include "../animation/animation.h"
 /**************************************************************************************************/
 
 /***************************************************************************************************
@@ -47,7 +48,7 @@ void util_setPins (int pinConfig)
  * RETURN
  * void
 ***************************************************************************************************/
-void wait (unsigned long waitTime)
+void util_wait (unsigned long waitTime)
 {
     unsigned long startTime = millis();
     while( (startTime - millis()) < waitTime)
@@ -77,5 +78,5 @@ void wait (unsigned long waitTime)
 ***************************************************************************************************/
 void util_buttonISR (void)
 {
-
+  animation++;
 }

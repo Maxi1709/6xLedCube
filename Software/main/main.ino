@@ -9,6 +9,7 @@
  * INCLUDES
 */
 #include "utility/utility.h"
+#include "animation/animation.h"
 /**************************************************************************************************/
 
 /***************************************************************************************************
@@ -54,5 +55,19 @@ void setup (void)
 ***************************************************************************************************/
 void loop (void)
 {
-  
+  /* check that the animation variable does not get bigger than the amount of animations */
+  if(animation > MAX_ANIMATION)
+  {
+    animation = 0;
+  }
+  /* toggle animations */
+  switch (animation)
+  {
+  case 0:
+    ani_0_allOff();
+    break;
+  default:
+    /* should not happen */
+    break;
+  }
 }
